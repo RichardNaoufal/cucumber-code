@@ -375,7 +375,7 @@ public class ExampleSteps {
 	
 	@Given("I have opened the browser") 
     public void openBrowser() {
-	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+	System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/plugins/chromedriver");
     	ChromeOptions options = new ChromeOptions();
     	options.addArguments("--headless");
 		this.driver = new ChromeDriver(options);
