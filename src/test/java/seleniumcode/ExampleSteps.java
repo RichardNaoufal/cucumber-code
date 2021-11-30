@@ -375,10 +375,9 @@ public class ExampleSteps {
 	
 	@Given("I have opened the browser") 
     public void openBrowser() {
-		System.setProperty("webdriver.chrome.driver", "C:\\work\\Tools\\Selenium\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     	ChromeOptions options = new ChromeOptions();
-    	options.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
-    	//options.addArguments("--headless");
+    	options.addArguments("--headless");
 		this.driver = new ChromeDriver(options);
 		this.driver.manage().window().maximize();
     }
